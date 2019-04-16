@@ -1,0 +1,41 @@
+html {
+  font-family: sans-serif;
+  background-color: black;
+}
+
+h1 {
+  color: green;
+}
+
+p, a, li {
+  color: lightgreen;
+  text-decoration: none;
+}
+
+p.title {
+  color: green;
+  font-weight: 900;
+  font-size: xx-large;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+/* colored bullet. W3C trick: https://www.w3.org/Style/Examples/007/color-bullets.en.html */
+ul li::before {
+  content: "\25BA";  /* CSS unicode for bullet */
+  color:orange; /* bullet color */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 2em; /* space between text and bullet */
+  margin-left: -1em; /* left offset of list */
+}
+
+a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+ul{
+ list-style:square red;
+}
