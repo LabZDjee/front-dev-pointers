@@ -16,7 +16,7 @@
     <ul>
       <url th="stackoverflow: https://stackoverflow.com" li="true"></url>
       <url th="github: https://github.com" li="true"></url>
-      <li>MDN's <url th="CSS: https://developer.mozilla.org/en-US/docs/Web/CSS"></url> -
+      <li><url th="MDN: https://developer.mozilla.org/en-US/"></url>'s <url th="CSS: https://developer.mozilla.org/en-US/docs/Web/CSS"></url> -
         <url th="javascript: https://developer.mozilla.org/en-US/docs/Web/javascript"></url>
       </li>
       <url th="w3schools: https://www.w3schools.com" li="true"></url>
@@ -58,10 +58,6 @@
   </div>
 </body>
 <script>
-  Vue.component("liUrl", {
-    props: ["t", "h"],
-    template: `<li><a :href="h" target="_blank" rel="noopener noreferrer">{{t}}</a></li>`,
-  });
   Vue.component("url", {
     props: ["th", "li"],
     data() {
@@ -72,9 +68,9 @@
     },
     template: `
 <li v-if="li">
-  <a :href="h" target="_blank">{{t}}</a>
+  <a :href="h" target="_blank" rel="noopener noreferrer">{{t}}</a>
 </li>
-<a v-else :href="h" target="_blank">{{t}}</a>`,
+<a v-else :href="h" target="_blank" rel="noopener noreferrer">{{t}}</a>`,
     created() {
       // analyzes 'th' prop to split it into
       const catchRegExp = RegExp("(.*): ((?:(?:https?://)|(?:\./assets/)).*)", "g");
