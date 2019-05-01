@@ -3,6 +3,7 @@
   --title-color: green;
   --default-color: lightgreen;
   --bullet-color: orange;
+  --link-color: greenyellow;
   --link-over-color: yellow;
 }
 
@@ -18,6 +19,10 @@ h1 {
 p, a, li {
   color: var(--default-color);
   text-decoration: none;
+}
+
+a, a:visited {
+  color: var(--link-color);
 }
 
 p.title {
