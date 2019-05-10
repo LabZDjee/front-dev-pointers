@@ -12,4 +12,7 @@ Component usage syntax:
 
 so, the ```th``` parameter contains description text and URL (separated by a column and a space) and the ```li``` paramter tells wheter the ```<a>``` link should be surrounded by ```<li>``` markup
 
+## URL
+
+https://labzdjee.github.io/front-dev-pointers
 
